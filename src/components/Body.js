@@ -32,11 +32,11 @@ const Body=()=>{
           <div className="flex items-center space-x-4">
             <input
               type="text"
-              className="border border-solid border-black p-2"
+              className="border border-solid border-black p-2 rounded-lg shadow-xl"
               placeholder="Search for a restaurant"
             />
             <button
-              className="px-4 py-2 bg-green-400 text-white"
+              className="px-4 py-2 bg-green-400 text-white rounded-lg shadow-xl"
               onClick={() => {
                 console.log("Search clicked");
               }}
@@ -45,7 +45,7 @@ const Body=()=>{
             </button>
           </div>
           <button
-            className="px-4 py-2 bg-red-200"
+            className="px-4 py-2 bg-pink-200 rounded-lg shadow-lg"
             onClick={() => {
               const filteredList = listOfRestaurant.filter(
                 (res) => res.data.avgRating > 4
