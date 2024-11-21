@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import { CDN_URL } from "../../utils/constant";
+import UserContext from "../../utils/UserContext";
 const RestaurantCards = ({ resData }) => {
     // console.log(resData.info);
+    const data = useContext(UserContext);
     const { name, avgRating, cuisines, costForTwo, locality } = resData;
 
     return (
@@ -15,6 +18,8 @@ const RestaurantCards = ({ resData }) => {
             <h3 className="text-gray-600">Cuisines: {resData.info.cuisines}</h3>
             <h3 className="text-gray-600">Cost for Two: ₹{resData.info.costForTwo}</h3>
             <h4 className="text-gray-500">{resData.info.locality}</h4>
+          {/*  .........................Use of Context................... */}
+            {/* <h6>{data.loggedInUser}</h6> */}
         </div>
     );
 }

@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import UserContext from "../../utils/UserContext";
 const Header= ()=>{
 
     const [loginButton, setLoginButton] = useState("Login"); 
     const [onlineStatus, setOnlineStatus] = useState(false)
+    const {loggedInUser} = useContext(UserContext);
+    // console.log("hello", LoggedInUserName);
 
     return(
         <div>
@@ -25,6 +28,9 @@ const Header= ()=>{
                 </li>
                 <li className="px-4">
                     <Link to="/grocery">Grocery</Link>
+                </li>
+                <li className="px-4">
+                   {loggedInUser}
                 </li>
                 <button className="login" onClick={()=>{
                     loginButton === "Login" ? setLoginButton("Logout") : setLoginButton("Login")
