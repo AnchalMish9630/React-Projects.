@@ -1,6 +1,5 @@
 import { CDN_URL } from "../../utils/constant";
 const ItemList = ({itemData})=>{
-    console.log("hwllo anchla", itemData);
 
     return(
         <div>

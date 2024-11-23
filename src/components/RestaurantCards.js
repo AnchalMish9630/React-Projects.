@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { CDN_URL } from "../../utils/constant";
 import UserContext from "../../utils/UserContext";
 const RestaurantCards = ({ resData }) => {
-    // console.log(resData.info);
     const data = useContext(UserContext);
     const { name, avgRating, cuisines, costForTwo, locality } = resData;
 
