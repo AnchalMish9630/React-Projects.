@@ -9,15 +9,19 @@ import Error from './src/components/Error';
 import About from './src/components/About';
 import Contact from './src/components/Contact';
 import RestaurantMenu from './src/components/RestaurantMenu';
+import { Provider } from 'react-redux';
+import appStore from './utils/store/appStore';
 
 const Grocery = lazy(()=>import ('./src/components/Grocery')) ;
 
 const App = ()=>{
     return(
+      <Provider store={appStore}>
         <div className='app'>
             <Header />
             <Outlet />
         </div>
+        </Provider>
     )
 }
 const router = createBrowserRouter([
