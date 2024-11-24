@@ -17,7 +17,7 @@ const RestaurantMenu = () => {
 
 
   const itemCards = resInfo?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[2]?.card?.card?.itemCards || [];
-//   console.log(itemCards);
+
 
 //   useEffect(() => {
 //     // Log resInfo to verify structure
