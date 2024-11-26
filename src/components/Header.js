@@ -20,6 +20,9 @@ const Header= ()=>{
                 <li className="px-4">
                     <Link to="/">Home</Link>
                 </li>
+                <li className="px-4 font-bold">
+                    Cart 
+                </li>
                 <li className="px-4">
                     <Link to="/about">About Us</Link>
                 </li>
