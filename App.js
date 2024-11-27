@@ -14,20 +14,19 @@ import appStore from './utils/store/appStore';
 
 const Grocery = lazy(()=>import ('./src/components/Grocery')) ;
 
-const App = ()=>{
+const AppLayout = ()=>{
     return(
-      <Provider store={appStore}>
         <div className='app'>
             <Header />
             <Outlet />
         </div>
-        </Provider>
     )
 }
+
 const router = createBrowserRouter([
     {
       path: "/",
-      element: <App />,
+      element: <AppLayout />,
       children:[
        {
         path: "/",
@@ -53,6 +52,11 @@ const router = createBrowserRouter([
       ],
       errorElement: <Error />
     },
-  ]);
+]);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<RouterProvider router={router}  />);
+root.render(
+    <Provider store={appStore}>
+        <RouterProvider router={router} />
+    </Provider>
+);

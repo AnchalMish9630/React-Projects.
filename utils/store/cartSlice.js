@@ -6,9 +6,9 @@ const cartSlice = createSlice({
         itemCart: []
     },
     reducers: {
-        addItem: (action, state)=>{
+        addItem: (state, action)=>{
            //mutating state here
-            state.itemCart.push();
+            state.itemCart.push(action.payload);
         },
         removeItem:(state)=>{
             state.itemCart.pop();
