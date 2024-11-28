@@ -9,7 +9,7 @@ const Header= ()=>{
     const {loggedInUser} = useContext(UserContext);
     // console.log("hello", LoggedInUserName);
     const cartData = useSelector((store)=> store.cart.itemCart)
-    console.log("hello cart", cartData)
+    // console.log("hello cart", cartData)
 
     return(
         <div>
@@ -24,7 +24,7 @@ const Header= ()=>{
                     <Link to="/">Home</Link>
                 </li>
                 <li className="px-4 font-bold">
-                   <Link>Cart ({cartData.length}) items</Link> 
+                   <Link to="/cart">Cart ({cartData.length}) items</Link> 
                 </li>
                 <li className="px-4">
                     <Link to="/about">About Us</Link>
